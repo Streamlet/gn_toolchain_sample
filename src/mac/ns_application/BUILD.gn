@@ -1,0 +1,10 @@
+app_bundle("ns_application") {
+  sources = [
+    "Main.m",
+    "MainWindow.h",
+    "MainWindow.m",
+  ]
+  libs = [ "Cocoa.framework" ]
+  info_list = "Info.plist"
+  resources = []
+}

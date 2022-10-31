@@ -6,4 +6,11 @@ group("all") {
      "//src:shared_library_user",
      "//src:console_application",
   ]
+
+  if (is_mac) {
+    deps += [
+      "//src/mac/objc_console_application",
+      "//src/mac/ns_application",
+    ]
+  }
 }
