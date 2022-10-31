@@ -1,0 +1,9 @@
+group("all") {
+  deps = [
+     "//src:static_library",
+     "//src:static_library_user",
+     "//src:shared_library",
+     "//src:shared_library_user",
+     "//src:console_application",
+  ]
+}

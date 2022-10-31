@@ -1,0 +1,29 @@
+static_library("static_library") {
+  sources = [
+    "static_library.cc",
+    "static_library.h",
+  ]
+}
+
+executable("static_library_user") {
+  sources = [ "static_library_user.cc" ]
+
+  deps = [ ":static_library" ]
+}
+
+shared_library("shared_library") {
+  sources = [
+    "shared_library.cc",
+    "shared_library.h",
+  ]
+}
+
+executable("shared_library_user") {
+  sources = [ "shared_library_user.cc" ]
+
+  deps = [ ":shared_library" ]
+}
+
+executable("console_application") {
+  sources = [ "console_application.cc" ]
+}
