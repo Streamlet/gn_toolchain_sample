@@ -11,6 +11,7 @@ group("all") {
     deps += [
       "//src/mac/objc_console_application",
       "//src/mac/ns_application",
+      "//src/mac/dynamic_library",
     ]
   }
 }
