@@ -12,6 +12,7 @@ executable("static_library_user") {
 }
 
 shared_library("shared_library") {
+  defines = [ "SHARED_LIBRARY_EXPORTING" ]
   sources = [
     "shared_library.cc",
     "shared_library.h",

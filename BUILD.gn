@@ -14,4 +14,10 @@ group("all") {
       "//src/mac/dynamic_library",
     ]
   }
+
+  if (is_win) {
+    deps += [
+      "//src/win/win32_application",
+    ]
+  }
 }
