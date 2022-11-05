@@ -5,6 +5,6 @@ app_bundle("ns_application") {
     "MainWindow.m",
   ]
   libs = [ "Cocoa.framework" ]
-  info_list = "Info.plist"
+  info_plist = "Info.plist"
   resources = []
 }
