@@ -4,25 +4,13 @@ executable("win32_application") {
     "res.rc",
   ]
 
-  sdk_dir = getenv("WindowsSdkDir")  # C:\Program Files (x86)\Windows Kits\10\
-  sdk_ver = getenv("WindowsSDKVersion")  # 10.0.19041.0\
-  include_dir = sdk_dir + "Include/" + sdk_ver
-  lib_dir = sdk_dir + "Lib/" + sdk_ver
-
-  include_dirs = [
-    include_dir + "ucrt",
-    include_dir + "um",
-    include_dir + "shared",
-  ]
-
-  lib_dirs = [
-    lib_dir + "ucrt" + "\\x64",
-    lib_dir + "um" + "\\x64",
-  ]
-
   libs = [
     "kernel32.lib",
     "user32.lib",
     "gdi32.lib",
+  ]
+
+  configs += [
+    "//build/config/win:windows_subsystem_xp",
   ]
 }
