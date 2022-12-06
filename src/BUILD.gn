@@ -7,8 +7,11 @@ static_library("static_library") {
 
 executable("static_library_user") {
   sources = [ "static_library_user.cc" ]
-
   deps = [ ":static_library" ]
+  configs += [
+    "//build/config/win:static_runtime",
+    "//build/config/win:console_subsystem_xp",
+  ]
 }
 
 shared_library("shared_library") {
@@ -17,14 +20,28 @@ shared_library("shared_library") {
     "shared_library.cc",
     "shared_library.h",
   ]
+  if (is_win) {
+    configs += [
+      "//build/config/win:static_runtime",
+      "//build/config/win:windows_subsystem_xp",
+    ]  }
 }
 
 executable("shared_library_user") {
   sources = [ "shared_library_user.cc" ]
-
   deps = [ ":shared_library" ]
+  configs += [
+    "//build/config/win:static_runtime",
+    "//build/config/win:console_subsystem_xp",
+  ]
 }
 
 executable("console_application") {
   sources = [ "console_application.cc" ]
+  if (is_win) {
+    configs += [
+      "//build/config/win:static_runtime",
+      "//build/config/win:console_subsystem_xp",
+    ]
+  }
 }

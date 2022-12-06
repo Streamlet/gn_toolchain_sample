@@ -11,6 +11,7 @@ executable("win32_application") {
   ]
 
   configs += [
+    "//build/config/win:static_runtime",
     "//build/config/win:windows_subsystem_xp",
   ]
 }
