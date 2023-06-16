@@ -1,17 +1,6 @@
-executable("win32_application") {
+win32_app("win32_application") {
   sources = [
     "main.cc",
     "res.rc",
-  ]
-
-  libs = [
-    "kernel32.lib",
-    "user32.lib",
-    "gdi32.lib",
-  ]
-
-  configs += [
-    "//build/config/win:static_runtime",
-    "//build/config/win:windows_subsystem_xp",
   ]
 }
