@@ -1,22 +1,21 @@
 group("all") {
   deps = [
-     "//src:static_library",
-     "//src:static_library_user",
-     "//src:shared_library",
-     "//src:shared_library_user",
-     "//src:console_application",
+    "//src:cmake_test",
+    "//src:console_application",
+    "//src:shared_library",
+    "//src:shared_library_user",
+    "//src:static_library",
+    "//src:static_library_user",
   ]
 
   if (is_mac) {
     deps += [
-      "//src/mac/objc_console_application",
       "//src/mac/ns_application",
+      "//src/mac/objc_console_application",
     ]
   }
 
   if (is_win) {
-    deps += [
-      "//src/win/win32_application",
-    ]
+    deps += [ "//src/win/win32_application" ]
   }
 }

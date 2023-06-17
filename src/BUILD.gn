@@ -5,7 +5,7 @@ static_library("static_library") {
   ]
 }
 
-console_app("static_library_user") {
+executable("static_library_user") {
   sources = [ "static_library_user.cc" ]
   deps = [ ":static_library" ]
 }
@@ -18,11 +18,20 @@ shared_library("shared_library") {
   ]
 }
 
-console_app("shared_library_user") {
+executable("shared_library_user") {
   sources = [ "shared_library_user.cc" ]
   deps = [ ":shared_library" ]
 }
 
-console_app("console_application") {
+executable("console_application") {
   sources = [ "console_application.cc" ]
+}
+
+cmake("cmake_test") {
+  cmake_root_dir = "cmake"
+  if (is_win) {
+    cmake_outputs = [ "$root_out_dir/cmake_test/bin/cmake_test.exe" ]
+  } else {
+    cmake_outputs = [ "$root_out_dir/cmake_test/bin/cmake_test" ]
+  }
 }
