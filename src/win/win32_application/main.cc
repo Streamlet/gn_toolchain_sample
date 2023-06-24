@@ -7,7 +7,7 @@ LRESULT CALLBACK WndProc(HWND hWnd,
   switch (message) {
     case WM_PAINT: {
       PAINTSTRUCT ps;
-      RECT rc = {};
+      RECT rc = {0};
       GetClientRect(hWnd, &rc);
       HDC hdc = BeginPaint(hWnd, &ps);
       HBRUSH hBrush = CreateSolidBrush(RGB(255, 255, 0));
@@ -57,7 +57,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance,
   ShowWindow(hWnd, nCmdShow);
   UpdateWindow(hWnd);
 
-  MSG msg = {};
+  MSG msg = {0};
   while (GetMessage(&msg, NULL, 0, 0)) {
     if (!TranslateAccelerator(msg.hwnd, NULL, &msg)) {
       TranslateMessage(&msg);
