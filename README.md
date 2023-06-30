@@ -8,6 +8,6 @@ This project is a sample of [gn_toolchain](../../../gn_toolchain).
 
 ## Usage
 
-1. Run `git submodule update --init`.
+1. Run `srcdep` if [srcdep](https://github.com/Streamlet/srcdep) is installed, or run `fetch_deps` instead.
 
 2. Run `gn gen out` and `ninja -C out`.
