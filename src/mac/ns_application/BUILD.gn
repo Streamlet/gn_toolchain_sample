@@ -4,7 +4,7 @@ app_bundle("ns_application") {
     "MainWindow.h",
     "MainWindow.m",
   ]
-  libs = [ "Cocoa.framework" ]
+  frameworks = [ "Cocoa.framework" ]
   info_plist = "Info.plist"
   resources = []
 }
