@@ -1,6 +1,4 @@
 executable("objc_console_application") {
-  sources = [
-    "main.m",
-  ]
-  libs = [ "Cocoa.framework" ]
+  sources = [ "main.m" ]
+  frameworks = [ "Cocoa.framework" ]
 }
