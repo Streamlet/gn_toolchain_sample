@@ -1,6 +1,6 @@
 # gn 工具链用例
 
-![Autobuild Status](https://github.com/Streamlet/gn_toolchain_sample/actions/workflows/autobuild.yml/badge.svg)
+![](https://github.com/Streamlet/gn_toolchain_sample/actions/workflows/windows.yml/badge.svg) ![](https://github.com/Streamlet/gn_toolchain_sample/actions/workflows/linux.yml/badge.svg) ![](https://github.com/Streamlet/gn_toolchain_sample/actions/workflows/macos.yml/badge.svg)
 ---
 [(Here is the English Version)](README.md)
 
